@@ -6,6 +6,8 @@ on:
       - main  # or specify other branches you want to trigger the action
     tags:
       - 'v*'  # This will also trigger on version tags
+  repository_dispatch:
+    types: [rebuild-container]  # triggered by config repo action
 
 env:
   REGISTRY: ghcr.io
