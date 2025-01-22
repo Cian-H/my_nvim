@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main  # or specify other branches you want to trigger the action
+    paths-ignore:
+      - "README.md"
+      - "run.sh"
     tags:
       - 'v*'  # This will also trigger on version tags
   repository_dispatch:
