@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker run -it -v .:/mnt/volume --workdir=/mnt/volume my_nvim
+docker run --rm -it -v /tmp/my_nvim_config:/root -v .:/cwd --network host ghcr.io/cian-h/my_nvim:latest
